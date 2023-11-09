@@ -1,19 +1,28 @@
+
 .card {
-  border: 0.1rem solid black;
+  border: 0.1rem solid #ccc;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
-  background: #f8f8f8;
+  background: #222;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  max-width: 50%;
 }
 
 .card:hover {
-  box-shadow: 0.25rem 0.25rem black;
+  box-shadow: 0.25rem 0.25rem #fff;
   translate: -0.25rem -0.25rem;
 }
 
 .card > h2 {
+  display: inline-block;
+  color: #ccc;
   font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.3rem;
+  text-align: center;
+  border-left: 0.2rem solid #ccc;
+  padding-left: 0.2rem;
 }
 
 .card > img {
@@ -25,4 +34,24 @@
 .card:hover > img {
   translate: -0.25rem -0.25rem;
   box-shadow: 0.25rem 0.25rem #FEA6CA;
+}
+
+.div-tag {
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  border: 0.1rem solid black;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  text-align: center;
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  color: #222;
+  font-weight: bold;
+  background: white;
+  white-space: nowrap;
+  display: inline-block;
 }

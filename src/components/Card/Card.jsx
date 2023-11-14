@@ -1,3 +1,5 @@
+import Tag from "../Tag/Tag"
+
 export default function Card(props) {
     const item = props.item
 
@@ -5,9 +7,9 @@ export default function Card(props) {
                 <div className="card">
                     <h2>{item.name}</h2>
                     <div className="div-tag">
-                    <tag className="tag">Status:{item.status}</tag>
-                    <tag className="tag">Espécie:{item.especie}</tag>
-                    <tag className="tag">Origem:{item.origem}</tag>
+                    <Tag text="Status: Vivo"/>
+                    <Tag text="Espécie: Humana"/>
+                    <Tag text="Origem: Terra C-137"/>
                 </div>
                     <img src={item.imageURL} alt="teste"/>
                 </div>

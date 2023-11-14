@@ -5,18 +5,35 @@ function App() {
 
   const item1 = {
     name: "Rick Sanchez",
-    imageURL: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+    imageURL: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    status: " Vivo",
+    especie: " Humana",
+    origem: " Terra C-137"
   }
 
   const item2 = {
     name: "Morty Smith",
-    imageURL: "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+    imageURL: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    status: " Vivo",
+    especie: " Humana",
+    origem: " Terra C-137"
   }
+
+  const item3 = {
+    name: "Summer Smith",
+    imageURL: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+    status: " Vivo",
+    especie: " Humana",
+    origem: " Terra C-137"
+  }
+
+  const items = [ item1, item2, item3]
 
   return (
     <>
-      <Card item={item1} />
-      <Card item={item2} />
+      {items.map(function (element) {
+        return <Card item={element} />
+      })}
     </>
   )
 }

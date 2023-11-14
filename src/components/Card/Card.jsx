@@ -4,7 +4,7 @@ export default function Card(props) {
     const item = props.item
     const tags = item.tags || []
 
-    return <div>
+    return <div className="cards">
                 <div className="card">
                     <h2>{item.name}</h2>
                     <div className="div-tag">

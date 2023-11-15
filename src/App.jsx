@@ -5,24 +5,6 @@ import { useState } from 'react'
 
 function App() {
 
-  const item1 = {
-    name: "Rick Sanchez",
-    image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-    tags: ["Status: Vivo", "Espécie: Humana", "Origem: Terra C-137"]
-  }
-
-  const item2 = {
-    name: "Morty Smith",
-    image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-    tags: ["Status: Vivo", "Espécie: Humana", "Origem: Terra C-137"]
-  }
-
-  const item3 = {
-    name: "Summer Smith",
-    image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
-    tags: ["Status: Vivo", "Espécie: Humana", "Origem: Terra C-137"]
-  }
-
   // const items = [ item1, item2, item3]
   const [items, setItems] = useState([])
 
@@ -34,7 +16,19 @@ function App() {
 
     const body = await response.json()
 
-    setItems(body.results)
+    const results = body.results.map(function (element) {
+      return {
+        name: element.name,
+        image: element.image,
+        tags: [
+          `Status: ${element.status}`,
+          `Species: ${element.species}`,
+          `Origin: ${element.origin.name}`
+        ]
+      }
+    })
+
+    setItems(results)
   }
   useEffect(function () {
     carregarDadosApi()

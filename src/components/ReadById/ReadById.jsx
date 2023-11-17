@@ -31,7 +31,7 @@ export default function ReadById() {
         </div>
 
         <div className="info">
-            <div className="info-tag">Status: {item.satus}</div>
+            <div className="info-tag">Status: {item.status}</div>
 
             <h1 className="info-title">{item.name}</h1>
 
